@@ -114,6 +114,7 @@ class _apiCallingState extends State<apiCalling> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
@@ -131,7 +132,7 @@ class _apiCallingState extends State<apiCalling> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "After pressing the Button, Scroll down.",
+                            "Fetching might take some time.",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 15,
@@ -141,9 +142,11 @@ class _apiCallingState extends State<apiCalling> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 90),
-                    LottieBuilder.network(
-                        'https://assets10.lottiefiles.com/packages/lf20_s9dkwhdi.json')
+                    SizedBox(height: 60),
+                    LottieBuilder.asset(
+                      'animations/duck.json',
+                      height: 300,
+                    ),
                   ],
                 ),
               ],
