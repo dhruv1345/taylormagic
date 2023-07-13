@@ -47,7 +47,7 @@ class _apiCallingState extends State<apiCalling> {
                                   children: [
                                     Container(
                                       decoration: BoxDecoration(
-                                        // color: Color(0xff45CFDD),
+                                     
                                         borderRadius: BorderRadius.circular(12),
                                         border: Border.all(
                                             color: Colors.white, width: 2),
@@ -158,7 +158,7 @@ class _apiCallingState extends State<apiCalling> {
   }
 
   void fetchTaylor() async {
-    print('Here is you quote');
+    // print('Here is your quote');
     const url = 'https://taylorswiftapi.onrender.com/get';
     final uri = Uri.parse(url);
     final response = await http.get(uri);
@@ -168,6 +168,6 @@ class _apiCallingState extends State<apiCalling> {
       users = json['quote'];
       print(users);
     });
-    print('completed');
+    // print('completed');
   }
 }

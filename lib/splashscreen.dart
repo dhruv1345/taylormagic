@@ -21,7 +21,7 @@ class splashScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         const Text(
-                          'Taylor\'s Fan ?',
+                          'Taylor Fan ?',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 30,
