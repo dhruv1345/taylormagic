@@ -14,19 +14,34 @@ class splashScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 90),
+                SizedBox(height: 60),
                 Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: const Text(
-                      'Best Place to find Motivation',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          // fontFamily: 'OpenSans-Light',
-                          // color: Color.fromARGB(255, 168, 198, 169),
-                          color: Colors.pink),
+                    child: Column(
+                      children: [
+                        const Text(
+                          'Taylor\'s Fan ?',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              // fontFamily: 'OpenSans-Light',
+                              // color: Color.fromARGB(255, 168, 198, 169),
+                              color: Colors.pink),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'This App is for you',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              // fontFamily: 'OpenSans-Light',
+                              // color: Color.fromARGB(255, 168, 198, 169),
+                              color: Colors.pink),
+                        ),
+                      ],
                     ),
                   ),
                 ),
