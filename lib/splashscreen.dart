@@ -36,7 +36,7 @@ class splashScreen extends StatelessWidget {
                 OutlinedButton(
                     style: OutlinedButton.styleFrom(
                         shape: StadiumBorder(),
-                        side: BorderSide(width: 1.5, color: Colors.pink)),
+                        side: BorderSide(width: 1.5, color: Colors.grey)),
                     onPressed: () {
                       Navigator.push(
                         context,
