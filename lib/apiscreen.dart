@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 // import 'package:taylormagic/splashscreen.dart';
 import 'package:lottie/lottie.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:http/http.dart' as http;
 
 class apiCalling extends StatefulWidget {
@@ -13,6 +14,11 @@ class apiCalling extends StatefulWidget {
 
 class _apiCallingState extends State<apiCalling> {
   var users;
+
+  // void _shareContent() async {
+  //   Share.share(users);
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,16 +43,57 @@ class _apiCallingState extends State<apiCalling> {
                               shrinkWrap: true,
                               itemCount: 1,
                               itemBuilder: ((context, index) {
-                                return Card(
-                                  margin: EdgeInsets.only(
-                                      top: 12, bottom: 12, left: 7, right: 7),
-                                  child: Text(
-                                    users,
-                                    style: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
+                                return Column(
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        // color: Color(0xff45CFDD),
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(
+                                            color: Colors.white, width: 2),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.lightBlueAccent,
+                                            blurRadius: 30,
+                                          ),
+                                        ],
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(12.0),
+                                            child: Text(
+                                              users,
+                                              style: const TextStyle(
+                                                fontSize: 30,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          // Row(
+                                          //   children: [
+                                          //     ElevatedButton(
+                                          //       onPressed: () {},
+                                          //       child: const Icon(Icons.share),
+                                          //     )
+                                          //   ],
+                                          // )
+                                        ],
+                                      ),
                                     ),
-                                  ),
+                                    SizedBox(height: 20),
+                                    ElevatedButton.icon(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue),
+                                      onPressed: () {
+                                        Share.share(
+                                            "This is a motivational quote is from Taylor Swift. From an app made by Dhruv Gupta 💗 : " +
+                                                users);
+                                      },
+                                      icon: Icon(Icons.share),
+                                      label: Text("Share this"),
+                                    ),
+                                  ],
                                 );
                               })),
                         ),
@@ -54,12 +101,47 @@ class _apiCallingState extends State<apiCalling> {
                     : Container(),
                 Column(
                   children: [
-                    SizedBox(height: 150),
-                    ElevatedButton(
-                      onPressed: fetchTaylor,
-                      child: const Text("Words by Taylor"),
+                    SizedBox(height: 100),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width - 70,
+                      height: 50,
+                      child: ElevatedButton.icon(
+                        icon: Icon(Icons.touch_app),
+                        onPressed: fetchTaylor,
+                        label: const Text(
+                          "Words by Taylor",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
                     ),
-                    SizedBox(height: 170),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.white, width: 2),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.blue,
+                              blurRadius: 30,
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "After pressing the Button, Scroll down.",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 90),
                     LottieBuilder.network(
                         'https://assets10.lottiefiles.com/packages/lf20_s9dkwhdi.json')
                   ],

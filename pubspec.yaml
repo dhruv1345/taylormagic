@@ -15,6 +15,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.5
   google_fonts: ^4.0.4
+  share_plus: ^7.0.2
+  # share: ^0.6.5
+  # share_plus: ^1.2.0
+  # flutter_share_me: ^1.2.0
   
 
 dev_dependencies:
