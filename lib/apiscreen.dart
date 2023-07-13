@@ -87,7 +87,7 @@ class _apiCallingState extends State<apiCalling> {
                                           backgroundColor: Colors.blue),
                                       onPressed: () {
                                         Share.share(
-                                            "This is a motivational quote is from Taylor Swift. From an app made by Dhruv Gupta 💗 : " +
+                                            "This motivational quote is from Taylor Swift. Through an app made by Dhruv Gupta 💗 : " +
                                                 users);
                                       },
                                       icon: Icon(Icons.share),

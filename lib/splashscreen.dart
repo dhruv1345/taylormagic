@@ -22,21 +22,21 @@ class splashScreen extends StatelessWidget {
                       'Best Place to find Motivation',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: 26,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           // fontFamily: 'OpenSans-Light',
-                          color: Colors.green),
+                          // color: Color.fromARGB(255, 168, 198, 169),
+                          color: Colors.pink),
                     ),
                   ),
                 ),
-                SizedBox(height: 50),
-                LottieBuilder.network(
-                    'https://assets2.lottiefiles.com/packages/lf20_C67qsN3hAk.json'),
+                SizedBox(height: 30),
+                LottieBuilder.asset('animations/home.json'),
                 SizedBox(height: 50),
                 OutlinedButton(
                     style: OutlinedButton.styleFrom(
                         shape: StadiumBorder(),
-                        side: BorderSide(width: 1.5, color: Colors.green)),
+                        side: BorderSide(width: 1.5, color: Colors.pink)),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -45,9 +45,9 @@ class splashScreen extends StatelessWidget {
                       );
                     },
                     child: Text(
-                      'Click to hear what Taylor Has for You 💗',
+                      'Click to see what Taylor Has for You 💗',
                       style: TextStyle(
-                          color: Colors.green, fontWeight: FontWeight.bold),
+                          color: Colors.pink, fontWeight: FontWeight.bold),
                     )),
                 // FloatingActionButton(
                 //   onPressed: () {
